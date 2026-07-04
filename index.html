@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>CASSECTO — Straight from the 90's</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="player" id="dropZone">
+
+    <div class="brand">
+        <span class="brand-mark">▸▸</span>
+        <h1>CASSECTO</h1>
+        <span class="brand-tag">TYPE II HIGH BIAS</span>
+    </div>
+
+    <div class="cassette-area">
+        <div class="cassette">
+            <div class="screws"></div>
+
+            <div class="label">
+                <p class="label-eyebrow">NOW PLAYING</p>
+                <h2 id="songTitle">Insert Cassette</h2>
+                <p class="label-sub" id="trackMeta">Drop an audio file or browse</p>
+            </div>
+
+            <div class="reel left" id="reelLeft">
+                <div class="tape-wind" id="windLeft"></div>
+                <div class="center"><div class="hole"></div></div>
+            </div>
+            <div class="reel right" id="reelRight">
+                <div class="tape-wind" id="windRight"></div>
+                <div class="center"><div class="hole"></div></div>
+            </div>
+
+            <div class="tape-window"></div>
+            <div class="vents"></div>
+        </div>
+    </div>
+
+    <input type="file" id="fileInput" accept="audio/*" multiple hidden>
+    <div class="lib-actions">
+        <button id="browseBtn" class="browse-btn">＋ Add Tracks</button>
+        <button id="clearBtn" class="browse-btn clear-btn">🗑 Clear Library</button>
+    </div>
+    <audio id="audio"></audio>
+
+    <div class="controls">
+        <button id="prevBtn" title="Previous">⏮</button>
+        <button id="playBtn" title="Play">▶</button>
+        <button id="pauseBtn" title="Pause">⏸</button>
+        <button id="stopBtn" title="Stop">⏹</button>
+        <button id="nextBtn" title="Next">⏭</button>
+    </div>
+
+    <div class="progress">
+        <span id="currentTime">0:00</span>
+        <input type="range" id="seekBar" min="0" value="0">
+        <span id="duration">0:00</span>
+    </div>
+
+    <div class="volume-row">
+        <span class="vol-icon">🔈</span>
+        <input type="range" id="volumeBar" min="0" max="100" value="80">
+        <span class="vol-icon">🔊</span>
+    </div>
+
+    <div class="playlist" id="playlist">
+        <p class="playlist-empty" id="playlistEmpty">No tracks loaded yet — this is Side A, waiting.</p>
+        <ul id="playlistItems"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
